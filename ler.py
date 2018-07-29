@@ -1,0 +1,39 @@
+from auxiliares import *
+def ler_prof():
+    global lista_professor
+    lista_ou_arquivo = input("Deseja ver em lista[lista] ou arquivo[arquivo]: ")
+    if(lista_ou_arquivo == "arquivo"):
+        nome_arq = input("Digite o nome do arquivo[nome.txt]: ")
+        arquivo = open(nome_arq, "r", encoding="utf-8")
+        lista = []
+        for dados in arquivo.readlines():
+            nome,cpf,departamento = dados.strip("\n").split("-")
+            lista.append([nome,cpf,departamento])
+        for x in range(len(lista)):
+            print(" ".join(lista[x]))
+        arquivo.close()
+    else:
+        for x in range(len(lista_professor)):
+            print(" ".join(lista_professor[x]))
+
+def ler_turma():
+    global lista_turma
+    lista_ou_arquivo = input("Deseja ver em lista[lista] ou arquivo[arquivo]: ")
+    if(lista_ou_arquivo == "arquivo"):
+        nome_arq = input("Digite o nome do arquivo[nome.txt]: ")
+        arquivo = open(nome_arq, "r", encoding="utf-8")
+        lista = []
+        for dados in arquivo.readlines():
+            codigo_da_turma,periodo,codido_disciplina,cpf_professor,cpf_aluno = dados.strip("\n").split("-")
+            lista = [codigo_da_turma,periodo,codido_disciplina,cpf_professor,cpf_aluno]
+            p = ''            
+            for x in range(len(lista)):
+                p += lista[x] + '\n'
+            print(p)
+        arquivo.close()
+    else:
+        p = ''
+        for x in range(len(lista_turma)):
+            p += str(lista_turma[x]) + '\n'
+        print(p)
+
