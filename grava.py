@@ -34,11 +34,15 @@ def grava_existe_prof():
         arquivo.write("%s-%s-%s\n" % (e[0], e[1], e[2]))
     arquivo.close()
 
-def grava_prof():
+def grava_prof(lista=None):
     global lista_professor
     arquivo = open("professor.txt","w",encoding="utf-8")
-    for e in lista_professor:
-        arquivo.write("%s-%s-%s\n"%(e[0],e[1],e[2]))
+    if(lista == None):
+        for e in lista_professor:
+            arquivo.write("%s-%s-%s\n"%(e[0],e[1],e[2]))
+    else:
+        for e in lista:
+            arquivo.write("%s-%s-%s\n"%(e[0],e[1],e[2]))
     arquivo.close()
 
 def grava_disciplina():

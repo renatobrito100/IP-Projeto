@@ -11,8 +11,10 @@ def cria_aluno():
         pergunta2 = input("Se o arquivo existe [sim],caso contrário [nao]")
         if (pergunta2 == "sim"):
             grava_existe_aluno()
+            lista_aluno.pop(0)
         else:
             grava_aluno()
+            lista_aluno.pop(0)
 
 def cria_turma():
     global lista_turma
@@ -35,8 +37,10 @@ def cria_turma():
         pergunta2 = input("Se o arquivo existe [sim],caso contrário [nao]")
         if(pergunta2 == "sim"):
             grava_existe_turma()
+            lista_turma.pop(0)
         else:
             grava_turma()
+            lista_turma.pop(0)
 
 
 def cria_prof():
@@ -50,8 +54,10 @@ def cria_prof():
         pergunta2 = input("Se o arquivo existe [sim],caso contrário [nao]")
         if(pergunta2 == "sim"):
             grava_existe_prof()
+            lista_professor.pop(0)
         else:
             grava_prof()
+            lista_professor.pop(0)
 
 
 def cria_disciplina():
@@ -64,5 +70,8 @@ def cria_disciplina():
         pergunta2 = input("Se o arquivo existe [sim],caso contrário [nao]")
         if(pergunta2 == "sim"):
             grava_existe_disciplina()
+            lista_disciplina.pop(0)
         else:
             grava_disciplina()
+            lista_disciplina.pop(0)
+
