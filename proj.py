@@ -1,14 +1,15 @@
 from auxiliares import *
 from cria import *
 from ler import *
-
+from atualiza import *
+from apaga import *
 def menu2():
     print("""
 ========MENU==========
 1 - Professor
 2 - Turma
 3 - Aluno
-4 - Disciplinan
+4 - Disciplina
     
 5 - Voltar
 ======================""")
@@ -46,6 +47,7 @@ while True:
         elif(nova_escolha == 3):
             cria_aluno()
         elif(nova_escolha == 4):
+
             cria_disciplina()
     elif(escolha == 2):
         printa()
@@ -54,21 +56,17 @@ while True:
             ler_prof()
         elif(nova_escolha == 2):
             ler_turma()
-    '''elif (opcao == 2):
-
-    elif (opcao == 3):
-    elif (opcao == 4):
-    elif (opcao == 5):
-    elif (opcao == 6):
-    elif (opcao == 7):
-    elif (opcao == 8):
-    elif (opcao == 9):
-    elif (opcao == 10):
-    elif (opcao == 11):
-    elif (opcao == 12):
-    elif (opcao == 13):
-    elif (opcao == 14):
-    elif (opcao == 15):
-    elif (opcao == 16):'''
-'''https://drive.google.com/file/d/0B3ouk05r7UFPaWNna1NYMWlpZTQ/view
-https://drive.google.com/file/d/0B3ouk05r7UFPT0hQVXZiQUM4VEU/view'''
+        elif(nova_escolha == 3):
+            ler_aluno()
+        elif(nova_escolha == 4):
+            ler_disciplina()
+    elif(escolha == 3):
+        printa()
+        nova_escolha = menu2()
+        if(nova_escolha == 1):
+            atualiza_prof()
+    elif(escolha == 4):
+        printa()
+        nova_escolha = menu2()
+        if(nova_escolha == 1):
+            apaga_prof()

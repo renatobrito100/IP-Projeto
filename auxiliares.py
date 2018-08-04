@@ -61,3 +61,11 @@ def codigo_disciplina():
 def pede_periodo():
     per = (input("Período: "))
     return per
+def volta_lista_prof():
+    global lista_professor
+    arquivo = open("professor.txt", "r", encoding="utf-8")
+    lista_professor = []
+    for dados in arquivo.readlines():
+        nome, cpf, departamento = dados.strip("\n").split("-")
+        lista_professor.append([nome, cpf, departamento])
+
